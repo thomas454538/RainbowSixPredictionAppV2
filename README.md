@@ -1,4 +1,4 @@
-# Prédiction des Victoires dans Rainbow Six Siege 🎮
+# Prédiction des Victoires dans Rainbow Six Siege V2 🎮
 
 Ce projet est une application de prédiction qui utilise un **modèle d'ensemble d'arbres de décision** pour estimer si le nombre de victoires d'un joueur dans Rainbow Six Siege est supérieur ou inférieur à la médiane. L'usage d'un modèle d'ensemble améliore la précision et la robustesse en combinant les résultats de plusieurs arbres de décision.
 
@@ -62,10 +62,6 @@ cssCopier le code[Collecte des Données]
 - **Profondeur maximale (`max_depth`)** : Limité à 5 niveaux, ce choix empêche chaque arbre de s'adapter excessivement aux données d’entraînement, assurant que chaque arbre reste général et évite le surapprentissage.
 - **Critère de construction des arbres** : Les arbres utilisent l’entropie ou le gini (selon le paramétrage choisi) pour mesurer l’impureté et déterminer les meilleures divisions à chaque nœud, optimisant ainsi les décisions des arbres.
 
-### Comparaison des Prédictions avec les Valeurs Réelles
-
-En utilisant un ensemble d'arbres de décision, le modèle atteint une **précision de 98% sur l'ensemble de test** et un **score F1 de 98%**, ce qui montre sa capacité à bien prédire la classe des victoires (au-dessus ou en-dessous de la médiane) avec peu d'erreurs. La matrice de confusion confirme l'efficacité du modèle avec un faible taux de faux positifs et de faux négatifs.
-
 ## 📊 Comparaison avec la Distribution des Valeurs
 
 L’application inclut des visualisations par estimation de densité de probabilité (KDE) pour chaque variable d’entrée (kills, deaths, xp, etc.), permettant de comparer les valeurs de l’utilisateur avec la distribution des données globales.
@@ -78,10 +74,8 @@ L’application inclut des visualisations par estimation de densité de probabil
 
 - `kills` : Nombre de kills
 - `deaths` : Nombre de morts
-- `losses` : Nombre de défaites
 - `xp` : Expérience accumulée
 - `headshots` : Nombre de tirs à la tête
-- `games_played` : Nombre de parties jouées
 - `time_played` : Temps de jeu (en secondes)
 
 ## 📈 Évolution des Performances du Modèle
@@ -90,7 +84,7 @@ Un graphique montre l'évolution des scores de précision et F1 sur les ensemble
 
 ## Lien vers l'Application
 
-- Application en ligne : [RainbowSixPredictionApp](https://thomas454538-rainbowsixpredictionapp-app-2zgi96.streamlit.app)
+- Application en ligne : [RainbowSixPredictionAppV2](https://rainbowsixpredictionappv2.streamlit.app/)
 
 ## 🚀 Exécution
 
